@@ -74,7 +74,7 @@ def obfuscate2():
     ran = ''.join(random.choices(string.ascii_uppercase + string.digits, k=S))
     file = input(Fore.GREEN+"\nEnter Path Of BAT File:- ")
     out_hex = []
-    out_hex.extend(["FF", "FE", "26", "63", "6C", "73", "0D", "0A", "FF", "FE", "0A", "0D"])
+    out_hex.extend(["FF", "FE", "26", "63", "6C", "73", "0D", "0A"])
     with open(f'{file}','rb') as f:
             penis = f.read()
     out_hex.extend(['{:02X}'.format(b) for b in penis])
